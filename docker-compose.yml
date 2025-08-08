@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  pangolin:
+    container_name: pangolin
+    image: adguard/adguardhome
+    restart: unless-stopped
+    ports:
+      - "3000:3000"       # Web UI
+      - "53:53/tcp"       # DNS TCP
+      - "53:53/udp"       # DNS UDP
+    volumes:
+      - ./adguard/work:/opt/adguardhome/work
+      - ./adguard/conf:/opt/adguardhome/conf

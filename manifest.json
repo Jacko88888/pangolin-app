@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "title": "Pangolin",
+  "description": "Blocks intrusions, ads, and trackers. Powered by AdGuard.",
+  "architecture": ["amd64"],
+  "startup": "docker-compose up -d",
+  "webui": "http://[HOST]:3000/",
+  "container": "pangolin",
+  "ports": "3000/tcp, 53/tcp, 53/udp",
+  "volumes": "/DATA/AppData/pangolin-app:/data",
+  "privileged": false
+}
